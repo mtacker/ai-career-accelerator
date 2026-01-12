@@ -1,0 +1,375 @@
+# Multi-Agent Orchestration Projects - .gitignore
+
+# ============================================================================
+# SECRETS & CREDENTIALS - NEVER COMMIT THESE
+# ============================================================================
+
+# API Keys and Tokens
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+config/secrets.json
+credentials.json
+
+# AWS Credentials
+.aws/
+aws-credentials
+*.credentials
+
+# Claude/Anthropic API
+anthropic_api_key.txt
+claude_key.txt
+
+# eBay API Keys
+ebay_credentials.json
+ebay_config.json
+
+# Other API Keys
+*_api_key.txt
+*_secret.txt
+api_keys/
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+.virtualenv
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit Test / Coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# ============================================================================
+# IDE / EDITORS
+# ============================================================================
+
+# Cursor AI
+.cursor/
+*.cursor
+
+# Windsurf
+.windsurf/
+*.windsurf
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# AWS / CLOUD
+# ============================================================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# AWS SAM
+.aws-sam/
+samconfig.toml
+
+# CloudFormation
+*.template.json
+packaged.yaml
+
+# ============================================================================
+# NODE.JS (if using for dashboard/frontend)
+# ============================================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================================================
+# DATABASES
+# ============================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# DynamoDB Local
+dynamodb-local/
+
+# PostgreSQL
+*.sql
+*.dump
+
+# ============================================================================
+# LOGS & MONITORING
+# ============================================================================
+
+# Application Logs
+logs/
+*.log
+log/
+
+# CloudWatch Logs (local testing)
+cloudwatch-logs/
+
+# Debug Files
+debug.log
+error.log
+*.log.*
+
+# ============================================================================
+# DATA FILES
+# ============================================================================
+
+# CSV/Excel Data (often contains PII or sensitive business data)
+data/
+*.csv
+*.xlsx
+*.xls
+uploads/
+
+# Exclude sample/example data
+!examples/*.csv
+!examples/*.xlsx
+
+# JSON Data Files
+data.json
+*_data.json
+
+# Pickle Files
+*.pkl
+*.pickle
+
+# ============================================================================
+# ARTIFACTS & OUTPUTS
+# ============================================================================
+
+# Generated Reports
+reports/
+output/
+results/
+
+# Downloaded Files
+downloads/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Cache Directories
+.cache/
+cache/
+
+# ============================================================================
+# EBAY AUTOMATION SPECIFIC
+# ============================================================================
+
+# eBay Images (can be large)
+ebay-images/
+product-images/
+
+# eBay Data Exports
+ebay-exports/
+listing-data/
+
+# ============================================================================
+# MANUFACTURING PROJECT SPECIFIC
+# ============================================================================
+
+# Sensor Data (can be huge)
+sensor-data/
+telemetry/
+
+# Equipment Logs
+equipment-logs/
+maintenance-records/
+
+# ML Models (large files - use Git LFS if needed)
+models/
+*.h5
+*.pkl
+*.joblib
+*.model
+
+# ============================================================================
+# JOB HUNT SYSTEM SPECIFIC
+# ============================================================================
+
+# Personal Resumes (don't commit your real resume!)
+resumes/personal/
+my-resume.*
+jenny-resume.*
+
+# Job Search Data
+job-matches/
+applications/
+interview-notes/
+
+# Keep example/template resumes
+!resumes/examples/
+!resumes/templates/
+
+# ============================================================================
+# SESSION & DEVELOPMENT
+# ============================================================================
+
+# Session Transcripts (keep these or not - your choice)
+# Uncomment if you don't want to commit:
+# transcripts/
+# session-handoff-prompt.md
+# universal-session-handoff-generator.md
+
+# Personal Notes
+notes/
+TODO.md
+SCRATCH.md
+personal/
+
+# Development Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# ============================================================================
+# DOCKER
+# ============================================================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# ============================================================================
+# TESTING
+# ============================================================================
+
+# Test Outputs
+test-results/
+test-output/
+.pytest_cache/
+
+# Mock Data
+mocks/
+fixtures/
+
+# ============================================================================
+# STREAMLIT (for dashboards)
+# ============================================================================
+
+.streamlit/secrets.toml
+
+# ============================================================================
+# MACOS
+# ============================================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ============================================================================
+# WINDOWS
+# ============================================================================
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================================
+# LINUX
+# ============================================================================
+
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# ALLOWED FILES (override above rules)
+# ============================================================================
+
+# Keep example configurations
+!config/example.env
+!config/sample_credentials.json
+
+# Keep documentation
+!docs/**/*.md
+!*.md
+
+# Keep example data
+!examples/
+!templates/
+!sample-data/
